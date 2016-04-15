@@ -16,5 +16,3 @@
     paged media 分页的内容，比如内容必须打印（print）出来, 这是就需要分页打印机才能打印。
 
 visual formatting module 并没有说明所有格式化的所有细节（比如：他就没有说明letter-space的算法）。 在本规范中没有包含的那些格式化问题可能会由于用户代理的一致性（conforming user agents）而表现的不同。
-
-### 视口 （The Viewport）

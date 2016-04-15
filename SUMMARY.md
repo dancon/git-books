@@ -4,3 +4,5 @@
         * [white-space](/css/properties/white-space.md)
     * [原理]()
         * [line box](/css/concept/line-box.md)
+        * [visual formatting module]()
+            * [初识visual formatting module](/css/concept/visual-formartting-module-introduction.md)
