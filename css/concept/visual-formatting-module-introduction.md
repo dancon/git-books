@@ -1,4 +1,4 @@
-### 简介
+### 初始visual formatting module
 
 这一章节和下一章节都在描述visual formatting module（可视化格式模型）: 用户代理（各种浏览器、app中内嵌的渲染引擎）在可是媒介（纸质媒介、听觉浏览器、显示器）中处理 DOM树。
 
