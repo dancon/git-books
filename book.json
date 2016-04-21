@@ -1,8 +1,11 @@
 {
-  "plugins": ["disqus"],
+  "plugins": ["disqus", "github"],
   "pluginsConfig": {
     "disqus": {
       "shortName": "johngitbook"
+    },
+    "github": {
+      "url": "https://github.com/dancon/git-books.git"
     }
   }
 }
