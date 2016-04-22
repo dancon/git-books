@@ -8,4 +8,6 @@
 
 2016/04/15 最近一段时间再翻译整理CSS 的可视化格式模块的内容，包括containing block, BFC, 定位系统， 文档流， 浮动等等
 
-2016/04/22 添加实战分类，添加gitbook使用指南，并添加若干插件
+2016/04/22 添加实战分类，添加[gitbook使用指南](/in_action/gitbook使用指南.md)，并添加若干插件
+
+2016/04/22 添加[远程调试（一）](/in_action/remote-debug1.md)
