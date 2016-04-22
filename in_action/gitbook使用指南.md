@@ -102,3 +102,7 @@ gitbook install
 [disqus](https://plugins.gitbook.com/plugin/disqus)
 
 添加 disqus 评论插件。
+
+[toggle-chapters](https://plugins.gitbook.com/plugin/toggle-chapters)
+
+合并左侧的目录

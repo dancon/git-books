@@ -1,5 +1,11 @@
 {
-  "plugins": ["disqus", "github", "baidu"],
+  "title": "一个程序员的自我修养",
+  "plugins": [
+    "disqus",
+    "github",
+    "baidu",
+    "toggle-chapters"
+  ],
   "pluginsConfig": {
     "disqus": {
       "shortName": "johngitbook"
@@ -9,6 +15,9 @@
     },
     "baidu": {
       "token": "af56d0fccff31d758ce9c361bf43591e"
+    },
+    "sharing": {
+      "weibo": true
     }
   }
 }
