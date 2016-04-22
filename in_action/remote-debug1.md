@@ -6,7 +6,7 @@
 
 ### 通过weinre来实现远程调试
 
-Weinre的本意是Web Inspector Remote。它是一种远程调试工具，可以帮助我们及时更改页面上的元素，样式（就像chrome 的 devtool），调试js(当然这里的调试并不能想chrome中那样断点调试，最起码我们可以看到我们console的信息了，而且可以在wenre的console中调试我们暴露在全局中的变量)。
+Weinre的本意是**We**b **In**spector **Re**mote。它是一种远程调试工具，可以帮助我们及时更改页面上的元素，样式（就像chrome 的 devtool），调试js(当然这里的调试并不能想chrome中那样断点调试，最起码我们可以看到我们console的信息了，而且可以在wenre的console中调试我们暴露在全局中的变量)。
 
 
 #### weinre的安装
