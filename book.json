@@ -19,5 +19,13 @@
     "sharing": {
       "weibo": true
     }
+  },
+  "variables":{
+    "sources": {
+      "seajs": [
+        "./src/code01.md",
+        "./src/code02.md"
+      ]
+    }
   }
 }
