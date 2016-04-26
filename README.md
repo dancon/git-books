@@ -11,3 +11,5 @@
 2016/04/22 添加实战分类，添加[gitbook使用指南](/in_action/gitbook使用指南.md)，并添加若干插件
 
 2016/04/22 添加[远程调试（一）](/in_action/remote-debug1.md)
+
+2016/04/26 添加[ps常用快捷键](/in_action/photoshop-hot-key.md)

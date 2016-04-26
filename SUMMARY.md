@@ -8,5 +8,6 @@
 * [实战](/in_action/index.md)
     * [gitbook使用指南](/in_action/gitbook使用指南.md)
     * [远程调试（一）](/in_action/remote-debug1.md)
+    * [ps常用快捷键](/in_action/photoshop-hot-key.md)
 * [源码分析](/sourse_analyse/index.md)
     * [seajs](/sourse_analyse/seajs/seajs.md)
