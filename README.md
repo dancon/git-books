@@ -13,3 +13,5 @@
 2016/04/22 添加[远程调试（一）](/in_action/remote-debug1.md)
 
 2016/04/26 添加[ps常用快捷键](/in_action/photoshop-hot-key.md)
+
+2016/04/26 添加[图片元素的load事件和complete属性详解](/js/essay/image_complete_load.md)

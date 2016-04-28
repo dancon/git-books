@@ -1,4 +1,6 @@
 * [Javascript](/js/index.md)
+    * [杂文](/js/essay/index.md)
+        * [图片元素的load事件和complete属性详解](/js/essay/image_complete_load.md)
 * [CSS](/css/index.md)
     * [属性](/css/properties/index.md)
         * [white-space](/css/properties/white-space.md)
