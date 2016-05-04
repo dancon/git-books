@@ -23,8 +23,8 @@
   "variables":{
     "sources": {
       "seajs": [
-        "./src/code01.md",
-        "./src/code02.md"
+        "./src/seajs.structure.md",
+        "./src/seajs.initial.md"
       ]
     }
   }

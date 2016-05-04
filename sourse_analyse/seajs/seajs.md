@@ -4,6 +4,8 @@
 
 {{ link('../temp/code.css') }}
 
+{% include './index.md'%}
+
 {% for item in book.sources.seajs %}
 {% include item %}
 {% endfor %}
