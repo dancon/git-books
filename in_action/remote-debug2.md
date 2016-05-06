@@ -12,7 +12,7 @@ Fiddler官网： <http://www.telerik.com/fiddler> 在这里我们可以免费下
 
 Fiddler 是以代理web服务器的形式工作的,它使用代理地址:127.0.0.1, 端口:8888. 当Fiddler会自动设置代理， 退出的时候它会自动注销代理，这样就不会影响别的程序。不过如果Fiddler非正常退出，这时候因为Fiddler没有自动注销，会造成网页无法访问。解决的办法是重新启动下Fiddler. 原理图如下：
 
-![Fiddler工作原理](/in_action/resourse/fiddler-process.png)
+![Fiddler工作原理](/in_action/resource/fiddler-process.png)
 
 #### Fiddler 工作面板简介
 
@@ -46,7 +46,7 @@ Fiddler的工作面板主要分为5部分，`菜单栏`、`工具栏`、`session
    ![break-before-request](/in_action/resource/break-before-request.png)
 
    > `After Responses` 在响应返回后设置断点，这样我们就可以修改响应内容来进行页面渲染或者其他调试。 通过命令来为指定会话设置 After Responses
-   
+
    ```
    bpafter http://127.0.0.1:8080/mIndex.html
 
@@ -63,3 +63,51 @@ Fiddler的工作面板主要分为5部分，`菜单栏`、`工具栏`、`session
    ![break-after-response](/in_action/resource/break-after-response.png)
 
    > `Disabled` 取消断点
+
+3. 菜单栏 `Tools` / `Fiddler Options` / `HTTPS` 勾选 `Decrypt HTTPS traffic` 允许Fiddler捕获https请求
+
+4. 菜单栏 `Tools` / `Fiddler Options` / `Connections` / 勾选 `Allow remote computers to connect` 允许Fiddler 远程调试。
+
+   > 手机远程调试我们需要手机端设置代理，如下图：
+
+   ![手机设置代理](/in_action/resource/phone-config.png)
+
+   `服务器` 输入自己电脑的ip
+
+   `端口` 输入Fiddler设置的8888
+
+#### 分析面板详细说明
+
+##### Statistics
+
+在左侧的会话列表中选中统一域名下的请求，进行统一性能分析。
+
+选中http://127.0.0.1:8080请求的分析结果：
+
+![性能分析](/in_action/resource/fiddler-statistics.png)
+
+##### Inspectors
+
+![请求头和响应体](/in_action/resource/fiddler-inspectors.png)
+
+##### AutoRespondes
+
+为特定的请求指定响应体，可以添加规则来命中一类请求，也可以从左侧会话列表拖一个请求过来，为单个请求指定响应体。
+
+![指定响应体](/in_action/resource/fiddler-autoresponses.png)
+
+##### Composer
+
+![模拟请求](/in_action/resource/fiddler-composer.png)
+
+##### Log
+
+日志面板
+
+##### Filter
+
+过滤器，可以用来设置要捕获的会话过滤规则。
+
+##### Timeline
+
+和Chrome dev tools 的Timeline功能类似。
