@@ -27,12 +27,14 @@ Fiddler的工作面板主要分为5部分，`菜单栏`、`工具栏`、`session
 2. 菜单栏 `Rules` / `Automatic Breakpoints` 是用来设置全局断点调试的。所谓全局就是所有请求都会被设置断点，也可以通过在命令行来对指定会话来设置断点。
 
    > `Before Requests` 在请求发出前设置断点，这样，我们就可以在设置断点前，修改一些query string 来进行与服务器调试，通过如下命令来为指定会话设置断点。
+
    ```
    // 只有捕获到http://127.0.0.1:8080/mIndex.html请求时，会在request发出前设置断点。
    bpu http://127.0.0.1:8080/mIndex.html
 
    // 不加任何参数取消 before request 断点
    bpu
+
    ```
 
    Before Requrests 断点原理图：
@@ -44,6 +46,7 @@ Fiddler的工作面板主要分为5部分，`菜单栏`、`工具栏`、`session
    ![break-before-request](/in_action/resource/break-before-request.png)
 
    > `After Responses` 在响应返回后设置断点，这样我们就可以修改响应内容来进行页面渲染或者其他调试。 通过命令来为指定会话设置 After Responses
+   
    ```
    bpafter http://127.0.0.1:8080/mIndex.html
 
