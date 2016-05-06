@@ -1,11 +1,15 @@
+.page-inner{
+  max-width: 900px!important;
+}
+
 pre{
   display: inline-block;
-  width: 60%;
+  width: 65%;
   box-sizing: border-box;
 }
 pre + blockquote{
   display: inline-block;
-  width: 39%;
+  width: 34%;
   vertical-align: top;
   box-sizing: border-box!important;
   border-left: 1px dotted #ddd!important;

@@ -24,7 +24,8 @@
     "sources": {
       "seajs": [
         "./src/seajs.structure.md",
-        "./src/seajs.initial.md"
+        "./src/seajs.initial.md",
+        "./src/seajs.util-lang.md"
       ]
     }
   }
