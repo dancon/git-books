@@ -40,3 +40,18 @@
 > 类似img 通过src来展示， input 通过 type 来决定展示类型
 
 在不明确声明的情况的，`block-level box`, `block-container box`, `block box` 统称为 `block` 块。
+
+##### 9.2.1.1 Anonymous block boxes （匿名块盒子）
+
+有如下文档：
+
+```
+ <div>
+    Some text
+    <p>More text</p>
+ </div>
+```
+
+> 假设 `div` `p` 元素都有规则 `display: block`
+
+如上DIV 元素既有行内内容，又有块内容
