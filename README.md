@@ -19,3 +19,5 @@
 2016/05/05 添加[远程调试（二）Fiddler篇](/in_action/remote-debug2.md)
 
 2015/05/06 添加[Controlling box generation](/css/concept/visuren_box-gen.md)
+
+2015/05/09 添加[String.prototype.replace](/js/String/String.prototype.replace.md)

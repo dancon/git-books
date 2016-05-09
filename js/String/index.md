@@ -1,0 +1,1 @@
+* [String.prototype.replace](/js/String/String.prototype.replace.md)
