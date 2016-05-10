@@ -21,3 +21,5 @@
 2015/05/06 添加[Controlling box generation](/css/concept/visuren_box-gen.md)
 
 2015/05/09 添加[String.prototype.replace](/js/String/String.prototype.replace.md)
+
+2015/05/10 添加[你不知道的函数声明提升](/js/essay/function_hoisting.md)
