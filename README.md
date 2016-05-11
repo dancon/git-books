@@ -23,3 +23,5 @@
 2015/05/09 添加[String.prototype.replace](/js/String/String.prototype.replace.md)
 
 2015/05/10 添加[你不知道的函数声明提升](/js/essay/function_hoisting.md)
+
+2015/05/11 转载[浏览器的重绘和重排 【转载】](/css/concept/redraw_reflow.md)
