@@ -1,2 +1,4 @@
 offsetWidth 返回元素border-box的宽度
 
+getComputedStyle返回最终应用在元素上的所有CSS样式的值，而elem.style只是返回元素内联style的css样式值。
+
