@@ -18,10 +18,12 @@
 
 2016/05/05 添加[远程调试（二）Fiddler篇](/in_action/remote-debug2.md)
 
-2015/05/06 添加[Controlling box generation](/css/concept/visuren_box-gen.md)
+2016/05/06 添加[Controlling box generation](/css/concept/visuren_box-gen.md)
 
-2015/05/09 添加[String.prototype.replace](/js/String/String.prototype.replace.md)
+2016/05/09 添加[String.prototype.replace](/js/String/String.prototype.replace.md)
 
-2015/05/10 添加[你不知道的函数声明提升](/js/essay/function_hoisting.md)
+2016/05/10 添加[你不知道的函数声明提升](/js/essay/function_hoisting.md)
 
-2015/05/11 转载[浏览器的重绘和重排 【转载】](/css/concept/redraw_reflow.md)
+2016/05/11 转载[浏览器的重绘和重排 【转载】](/css/concept/redraw_reflow.md)
+
+2016/09/05 添加[移动端吸顶兼容方案 -- position: -webkit-sticky](/js/essay/compatible_fixed_top_bar_solution.md)
