@@ -21,7 +21,7 @@
     * [远程调试（二）Fiddler篇](in_action/remote-debug2.md)
     * [ps常用快捷键](in_action/photoshop-hot-key.md)
     * [centOS7 安装 NodeJS](/in_action/centos7_install_nodejs_with_nvm.md)
-    * [centOS7 安装 Python3](/in_action/centOS7_install_Python3.md)
+    * [centOS7 安装 Python3](/in_action/CentOS7_install_Python3.md)
 * [源码分析](sourse_analyse/index.md)
     * [seajs](sourse_analyse/seajs/seajs.md)
 

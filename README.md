@@ -30,4 +30,4 @@
 
 2016/09/07 添加[centos7 安装 nodejs](/in_action/centos7_install_nodejs_with_nvm.md)
 
-2016/09/11 添加[centos7 安装 Python3](/in_action/centOS7_install_Python3.md)
+2016/09/11 添加[centos7 安装 Python3](/in_action/CentOS7_install_Python3.md)
