@@ -33,3 +33,5 @@
 2016/09/11 添加[centos7 安装 Python3](/in_action/CentOS7_install_Python3.md)
 
 2016/09/20 添加[伪类 :only-child](/css/selector/only-child.md)
+
+2016/09/21 添加[windows 编译 Node.js 源码](/in_action/compile_nodejs_from_source_code_in_windows.md)
