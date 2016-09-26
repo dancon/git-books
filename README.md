@@ -37,3 +37,5 @@
 2016/09/21 添加[windows 编译 Node.js 源码](/in_action/compile_nodejs_from_source_code_in_windows.md)
 
 2016/09/26 添加[CSS3 translate3d 在低版本 Android 问题记录](/css/issues/translate3d_issues.md)
+
+2016/09/26 转载[移动 Web 问题小结](/js/essay/mobile_issues_collection.md)

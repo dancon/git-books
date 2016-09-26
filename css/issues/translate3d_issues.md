@@ -7,7 +7,10 @@
 1. 在 Android 4.2 中 设置 `transform: translateZ(0)` 文字变糊。
 
 ![translate3d](/css/resource/translate3d.png)
+translate3d
+
 ![translate2d](/css/resource/translate2d.png)
+translate2d
 
 > Note：截图效果效果不是特别明显，在手机中看着就明显多了。
 

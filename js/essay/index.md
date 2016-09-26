@@ -5,3 +5,5 @@
 * [你不知道的函数声明提升](/js/essay/function_hoisting.md)
 
 * [移动端吸顶兼容方案 -- position: -webkit-sticky](/js/essay/compatible_fixed_top_bar_solution.md)
+
+* [移动 Web 问题小结](/js/essay/mobile_issues_collection.md)
