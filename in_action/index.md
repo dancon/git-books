@@ -8,3 +8,4 @@
 * [centOS7 安装 Python3](/in_action/CentOS7_install_Python3.md)
 * [Linux 常用命令](/in_action/linux_commands.md)
 * [windows 编译 Node.js 源码](/in_action/compile_nodejs_from_source_code_in_windows.md)
+* [intellij 常用快捷键和设置](/in_action/intellij_settings.md)

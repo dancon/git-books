@@ -29,6 +29,7 @@
     * [centOS7 安装 NodeJS](/in_action/centos7_install_nodejs_with_nvm.md)
     * [centOS7 安装 Python3](/in_action/CentOS7_install_Python3.md)
     * [windows 编译 Node.js 源码](/in_action/compile_nodejs_from_source_code_in_windows.md)
+    * [intellij 常用快捷键和设置](/in_action/intellij_settings.md)
 * [源码分析](sourse_analyse/index.md)
     * [seajs](sourse_analyse/seajs/seajs.md)
 
