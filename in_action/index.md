@@ -9,3 +9,4 @@
 * [Linux 常用命令](/in_action/linux_commands.md)
 * [windows 编译 Node.js 源码](/in_action/compile_nodejs_from_source_code_in_windows.md)
 * [centos7 安装 Docker](/in_action/centos7_install_docker.md)
+* [intellij 常用快捷键和设置](/in_action/intellij_settings.md)

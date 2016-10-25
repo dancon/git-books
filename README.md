@@ -40,4 +40,8 @@
 
 2016/09/26 转载[移动 Web 问题小结](/js/essay/mobile_issues_collection.md)
 
+2016/10/01 添加[移动端弹框后禁止背景屏幕滑动的解决方案](/js/essay/dialog_forbid_back_scroll.md)
+
+2016/10/08 添加[intellij 常用快捷键和设置](/in_action/intellij_settings.md)
+
 2016/10/26 添加[centos7 安装 Docker](/in_action/centos7_install_docker.md)

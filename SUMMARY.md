@@ -9,6 +9,7 @@
         * [你不知道的函数声明提升](js/essay/function_hoisting.md)
         * [移动端吸顶兼容方案 -- position: -webkit-sticky](/js/essay/compatible_fixed_top_bar_solution.md)
         * [移动 Web 问题小结](/js/essay/mobile_issues_collection.md)
+        * [移动端弹框后禁止背景屏幕滑动的解决方案](/js/essay/dialog_forbid_back_scroll.md)
 * [CSS](css/index.md)
     * 选择器
         * [伪类 :only-child](css/selector/only-child.md)
@@ -29,6 +30,6 @@
     * [centOS7 安装 Python3](/in_action/CentOS7_install_Python3.md)
     * [windows 编译 Node.js 源码](/in_action/compile_nodejs_from_source_code_in_windows.md)
     * [centos7 安装 Docker](/in_action/centos7_install_docker.md)
+    * [intellij 常用快捷键和设置](/in_action/intellij_settings.md)
 * [源码分析](sourse_analyse/index.md)
     * [seajs](sourse_analyse/seajs/seajs.md)
-

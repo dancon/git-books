@@ -7,3 +7,5 @@
 * [移动端吸顶兼容方案 -- position: -webkit-sticky](/js/essay/compatible_fixed_top_bar_solution.md)
 
 * [移动 Web 问题小结](/js/essay/mobile_issues_collection.md)
+
+* [移动端弹框后禁止背景屏幕滑动的解决方案](/js/essay/dialog_forbid_back_scroll.md)
