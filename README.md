@@ -39,3 +39,5 @@
 2016/09/26 添加[CSS3 translate3d 在低版本 Android 问题记录](/css/issues/translate3d_issues.md)
 
 2016/09/26 转载[移动 Web 问题小结](/js/essay/mobile_issues_collection.md)
+
+2016/10/26 添加[centos7 安装 Docker](/in_action/centos7_install_docker.md)
