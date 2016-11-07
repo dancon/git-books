@@ -45,3 +45,5 @@
 2016/10/08 添加[intellij 常用快捷键和设置](/in_action/intellij_settings.md)
 
 2016/10/26 添加[centos7 安装 Docker](/in_action/centos7_install_docker.md)
+
+2016/11/07 转载[Javascript继承机制的设计思想](/js/essay/JavaScript_OO_design.md)

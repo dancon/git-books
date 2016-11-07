@@ -10,6 +10,7 @@
         * [移动端吸顶兼容方案 -- position: -webkit-sticky](/js/essay/compatible_fixed_top_bar_solution.md)
         * [移动 Web 问题小结](/js/essay/mobile_issues_collection.md)
         * [移动端弹框后禁止背景屏幕滑动的解决方案](/js/essay/dialog_forbid_back_scroll.md)
+        * [Javascript继承机制的设计思想](/js/essay/JavaScript_OO_design.md)
 * [CSS](css/index.md)
     * 选择器
         * [伪类 :only-child](css/selector/only-child.md)
