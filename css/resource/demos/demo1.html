@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Content width</title>
+    <style>
+        #parent{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #aacc87;
+        }
+
+        #box{
+            background: #ccdd45;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <!-- 如果给 #box 设置百分比的 width ,那么他的宽度将基于他的 CB 的宽度来计算 -->
+        <div id="box"></div>
+    </div>
+</body>
+</html>
