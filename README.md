@@ -47,3 +47,5 @@
 2016/10/26 添加[centos7 安装 Docker](/in_action/centos7_install_docker.md)
 
 2016/11/07 转载[Javascript继承机制的设计思想](/js/essay/JavaScript_OO_design.md)
+
+2016/11/30 添加[浏览器渲染过程中的各种值 Specified Value, Computed Value, Used Value, Actual Value](/css/concept/assigning_value_cascading_and_inheritance.md)

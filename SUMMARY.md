@@ -22,6 +22,7 @@
         * [visual formatting module](css/concept/visual-formatting-module-introduction.md)
         * [Controlling box generation](css/concept/visuren_box-gen.md)
         * [浏览器的重绘和重排 【转载】](css/concept/redraw_reflow.md)
+        * [浏览器渲染过程中的各种值 Specified Value, Computed Value, Used Value, Actual Value](/css/concept/assigning_value_cascading_and_inheritance.md)
 * [实战](in_action/index.md)
     * [gitbook使用指南](in_action/gitbook使用指南.md)
     * [远程调试（一）weiner篇](in_action/remote-debug1.md)
