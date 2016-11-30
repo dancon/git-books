@@ -51,3 +51,5 @@
 2016/11/30 添加[浏览器渲染过程中的各种值 Specified Value, Computed Value, Used Value, Actual Value](/css/concept/assigning_value_cascading_and_inheritance.md)
 
 2016/11/30 添加[Hybrid app device width 获取不正确](/js/essay/native_web_hybrid_issue_device_width.md)
+
+2016/12/01 添加[Visual formatting model detail 翻译](/css/concept/visual_formatting_model_details.md)

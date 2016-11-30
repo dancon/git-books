@@ -79,6 +79,129 @@
 | em1                  | div1                 |
 | strong1              | em1                  |
 
-#### Content Width: the `width` property (Content box 的宽)
+#### 10.2 Content Width: the `width` property (Content box 的宽)
 
-> Name:
+width
+
+```
+    width: length | percentage | auto | inherit
+```
+
+默认初始值： auto
+
+对所有除 non-replaced 行内元素、table row 、row group 元素都生效
+
+不可继承
+
+百分值是基于元素的包含块来计算的
+
+Computed Value 为用户指定的 percentage | auto | 绝对值
+
+width 默认情况下指定了 content box 的宽度。
+
+width 属性对 non-replaced 的内联元素不生效， non-replaced 的行内元素的 width 是渲染后元素内容的 width。 Recall that inline boxes flow into line box. The width of line boxes is given by the containing block, but may be shorted by the presence of float.
+
+> 没翻译的部分没太理解
+
+为 width 指定负值是非法的。
+
+#### 10.3 Calculating widths and margins
+
+元素的 width, margin-left, margin-right, left, right 真正用于布局渲染的值是依赖于该元素生成的盒子类型的。原则上，Used value 和 Computed value 是相等的，width 为 auto 的将会有一个适当的直来替换，width 为百分比的，那么 width 值将会基于 CB 的 width 来计算。但是以下情况需要另当别论：
+
+1. inline, non-replace 元素； 比如：span em i 等行内元素
+
+2. inline, replaced 元素；比如：img
+
+3. 处于正常文档流中的 non-replaced 块级元素；比如：div
+
+4. 处于正常文档流中的 replaced 块级元素；比如：img{display: block;}
+
+5. floating, non-replaced 元素；p{float: left;}
+
+6. floating, replaced 元素；img{float: left;}
+
+7. 绝对定位的，non-replaced 元素；
+
+8. 绝对定位的，replaced 元素；
+
+9. 处于正常文档流中的 inline-block non-replaced 元素；
+
+10. 处于正常文档流中的 inline-block replaced 元素；比如：textarea input
+
+##### 10.3.1 inline, non-replaced elements
+
+width 对于这样的元素不生效，而对于水平方向的 margin-left: auto | margin-right: auto 的 computed value 为 0.
+
+> 对于行内元素，垂直方向上的 margin 是不生效的
+
+
+```
+    <span style="width: 100px; background: #678; margin-right: auto;">我爱中国</span><span>我是中国人</span>
+```
+
+效果：
+
+<span style="width: 100px; background: #678; margin-right: auto;">我爱中国</span><span>我是中国人</span>
+
+> width: 100 没有生效， margin-right: auto 也没有产生效果。
+
+但是水平方向的 margin 是对 inline 元素是有效果的。
+
+```
+    <span style="width: 100px; background: #678; margin-right: 20px;">我爱中国</span><span>我是中国人</span>
+```
+
+效果：
+
+<span style="width: 100px; background: #678; margin-right: 20px;">我爱中国</span><span>我是中国人</span>
+
+##### 10.3.2 inline, replaced elements
+
+对于这类型的元素，margin-left, margin-right 属性的 auto 值的 computed value 是 0.
+
+如果 height 和 width 的 computed value 是 auto, 并且元素具有固有的宽度，那么 width 的 used value 就是元素固有的 width
+
+> 一张实际宽高为 180x180 的图片，不指定宽度或者指定为 auto, 那么最终用于渲染的宽度将是 180
+
+```
+    <img src='../inline_replaced_element.jpg'>
+```
+
+效果如下：
+
+<img src='../inline_replaced_element.jpg'>
+
+![](../resource/inline_replaced_img.png)
+
+如果 height 和 width 的 computed value 都是 auto, 但是元素没有固有的尺寸，但是有一个固有的宽高比 ratio 和固有的高度 height；又或者 width 的 computed value 为 auto, height 有一个绝对值，而且元素还有一个固定的宽高比 ratio，那么 width 的计算公式如下：
+
+> width = height * ratio
+
+还是上面的图片 ratio = 1, 当指定 height: 100px; 那么 width = height * 1
+
+```
+    <img src='../inline_replaced_element.jpg' style='height: 100px;'>
+```
+
+效果如下：
+
+<img src='../inline_replaced_element.jpg' style="height: 100px;">
+
+![](../resource/inline_replaced_height.png)
+
+如果 height 和 width 的 computed value 都是 auto, 并且元素有固有的比例，但是都没有固有的宽高，那么在 CSS2 中 width 的 used value 是未定义的。但是建议，在这种场景下，如果元素的 containing block 自身的 width 不依赖于当前元素，那么该元素 width 的 used value 强制与正常文档流中 block-level, non-replaced 类型的元素的 width 一致。
+
+> 这种情况不好举例
+
+如果 width 的 computed value 是 auto, 还不满足已上的任一条件，那么 width 的 used value 被强制设置为 300px, 如果 300px 对于某些设备太宽，那么用户代理应该按照 2:1 的比例为设置该设备下所能用的最大的宽高
+
+> canvas 在不设置宽高的情况下默认的大小就是 300x150
+
+```
+    <canvas style="background: #ddd">
+```
+
+效果如下：
+
+<canvas style="background: #ddd">
