@@ -49,3 +49,5 @@
 2016/11/07 转载[Javascript继承机制的设计思想](/js/essay/JavaScript_OO_design.md)
 
 2016/11/30 添加[浏览器渲染过程中的各种值 Specified Value, Computed Value, Used Value, Actual Value](/css/concept/assigning_value_cascading_and_inheritance.md)
+
+2016/11/30 添加[Hybrid app device width 获取不正确](/js/essay/native_web_hybrid_issue_device_width.md)
