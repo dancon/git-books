@@ -205,3 +205,109 @@ width 对于这样的元素不生效，而对于水平方向的 margin-left: aut
 效果如下：
 
 <canvas style="background: #ddd">
+
+##### 10.3.3 Block-level, non-replaced elements in normal flow
+
+这种情况下，元素水平方向的属性的 used value 满足以下公式：
+
+> 'margin-left' + 'border-left-width' + 'padding-left' + 'width' + 'padding-right' + 'border-right-width' + 'margin-right' = width of containing block
+
+如果 width 不是 auto (width 默认值是 auto, 也就是说我们指定了 width 的值)，并且 'border-left-width' + 'padding-left' + 'width' + 'padding-right' + 'border-right-width' + 任何值不为 auto 的 'margin-left' 或者 'margin-right' 的和大于 containing block 的宽度 （content box 的 width），那么为了满足公式，任何值为 auto 的 margin-left 和 margin-right 的 used value 将被置为 0. 其实在 chrome 的实现中并不完全如此，水平方向的 margin 值将收 direction 的影响。
+
+> margin 的默认值为 0，要让 margin 的值为 auto 需手动设置
+
+我们假设 containing block 的宽度为 700，如下代码：
+
+```
+    <div id="outer-div" style="
+        padding: 30px 30px 30px 220px;
+        background: #ad9;
+        direction: ltr;
+        width: 700px;">
+
+            <div id="inner-div" style="
+                width: 100px;
+                height: 100px;
+                margin: auto auto auto 0px;
+                padding: 10px 310px;
+                border: 10px solid;
+                background: #340;
+                background-clip: content-box;">
+            </div>
+
+      </div>
+```
+
+> #inner-div width:100 + padding-left:310 + padding-right:310 + border-left-width:10 + border-right-width:10 + margin-left:0 = 740 > #outer-div.width:700
+
+在 chrome 中 margin-right 的值不是 0 而是 700 - 740 = -40
+
+效果如下：
+
+<div style="padding: 30px 30px 30px 220px; background: #ad9; direction: ltr; width: 700px;>
+    <div style="width: 100px; height: 100px; margin: auto auto auto 0px; padding: 10px 310px; border: 10px solid; background: #340; background-clip: content-box;"></div>
+</div>
+
+![](./resource/block-level-non-replace.png)
+
+> 如果 containing block direction: rtl, 那么就该是 margin-left 为 -40 了。
+
+如果以上所有属性的 computed value 都不是 auto, 那么 margin-left 和 margin-right 中某一个属性的 used value 将与他们的 computed value 不一致了，如果 containing block 的 direction 为 ltr, 那么将忽略 margin-right 的值，用能是公式成立的值来取代；如果 containing block 的 direction 为 rtl, margin-left 指定的值被忽略，used value 被使公式成立的值取代。
+
+```
+    <div id="outer-div" style="
+        padding: 30px 30px 30px 220px;
+        background: #ad9;
+        direction: ltr;
+        width: 700px;">
+
+            <div id="inner-div" style="
+                width: 100px;
+                height: 100px;
+                margin: 10px;
+                padding: 10px;
+                border: 10px solid;
+                background: #340;
+                background-clip: content-box;">
+            </div>
+
+      </div>
+```
+
+> containing block direction: ltr; 所以 margin-right: 10px 被忽略， 渲染后 margin-right = containing block.width:700 - width:100 - margin-left: 10 - padding-left:10 - padding-right:10 - border-left-width:10 - border-right-width:10
+
+效果如下：
+
+![](./resource/block-level-non-replace-margin-right.png)
+
+如果确实有属性的 computed value 为 auto, 那么最终该属性的 used value 依旧是让等式成立的值。
+
+如果 width 的 computed value 为 auto， 那么其他 computed value 为 auto 的属性的 used value 将是 0， 而 width 的 used value 是让等式成立的值。
+
+如果 margin-right 和 margin-left 的 computed value 都是 auto, 那么它们的 used value 将相等，这样就能够让元素在 containing block 内水平居中。
+
+> Note: margin: 0 auto; 只能让元素在 containing block 中水平居中。
+
+```
+    <div id="outer-div" style="
+        padding: 30px 30px 30px 220px;
+        background: #ad9;
+        direction: ltr;
+        width: 700px;">
+
+            <div id="inner-div" style="
+                width: 100px;
+                height: 100px;
+                margin: auto;
+                padding: 10px;
+                border: 10px solid;
+                background: #340;
+                background-clip: content-box;">
+            </div>
+
+      </div>
+```
+
+效果如下：
+
+![](./resource/block-level-non-replace-containing-block.png)
