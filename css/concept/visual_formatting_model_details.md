@@ -170,7 +170,7 @@ width 对于这样的元素不生效，而对于水平方向的 margin-left: aut
 
 效果如下：
 
-<img src='../inline_replaced_element.jpg'>
+<img src='../resource/inline_replaced_element.jpg'>
 
 ![](../resource/inline_replaced_img.png)
 
@@ -186,7 +186,7 @@ width 对于这样的元素不生效，而对于水平方向的 margin-left: aut
 
 效果如下：
 
-<img src='../inline_replaced_element.jpg' style="height: 100px;">
+<img src='../resource/inline_replaced_element.jpg' style="height: 100px;">
 
 ![](../resource/inline_replaced_height.png)
 

@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <title>Content width</title>
     <style>
-        #parent{
-            width: 200px;
-            height: 200px;
-            border: 1px solid #aacc87;
-        }
+      #parent {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #aacc87;
+      }
 
-        #box{
-            background: #ccdd45;
-            height: 50px;
-        }
+      #box {
+        background: #ccdd45;
+        height: 50px;
+      }
 
-        .img{
-            width: 100px;
-        }
+      .img {
+        width: 100px;
+      }
 
-        .text-area{
+      .text-area {
 
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div id="parent">
-        <!-- 如果给 #box 设置百分比的 width ,那么他的宽度将基于他的 CB 的宽度来计算 -->
-        <div id="box"></div>
+      <!-- 如果给 #box 设置百分比的 width ,那么他的宽度将基于他的 CB 的宽度来计算 -->
+      <div id="box"></div>
     </div>
 
     <p>replaced element</p>
@@ -45,5 +45,11 @@
     <span style="width: 100px; background: #678; margin: auto;">我爱中国</span><span>我是中国人</span>
 
     <canvas></canvas>
-</body>
+
+    <p>block-level, non-replaced</p>
+
+    <div style="padding: 30px; background: #9999aa">
+      <div style="margin: 10px; padding: 10px; border: 10px solid; width: 100px; height: 100px; background: #aacc87; background-clip: content-box"></div>
+    </div>
+  </body>
 </html>
