@@ -311,3 +311,19 @@ width 对于这样的元素不生效，而对于水平方向的 margin-left: aut
 效果如下：
 
 ![](./resource/block-level-non-replace-containing-block.png)
+
+##### 10.3.4 Block-level, replaced elements in normal flow
+
+这类型元素的 width 的 used value 与 inline, replaced 元素的算法一致，而 margin-left, margin-right 的 used value 的算法与 block-level, non-replaced 元素一致。
+
+```
+  <div style="width: 700px; padding: 30px; background: #adb">
+    <img src="http://p6.sinaimg.cn/1642346981/180/92211342365188" alt="" style="display: block; margin: auto">
+  </div>
+```
+
+效果如下：
+
+![](./resource/block-levet-replaced.png)
+
+> 元素的 width 为图片固有的宽度；margin-right, margin-left 的 used value 为 containing block.width - width:180 - padding-left:0 - padding-right:0 - border-left-width:0 - border-right-width
