@@ -22,6 +22,24 @@
       .text-area {
 
       }
+
+      :root{
+        --tt: 10px;
+      }
+
+      .tt{
+        --tt: 20px;
+        width: var(--tt);
+      }
+
+      .t1{
+        --tt: 30px;
+        padding: var(--tt);
+      }
+
+      .t2{
+        margin: var(--tt);
+      }
     </style>
   </head>
   <body>
@@ -57,5 +75,13 @@
     <div style="width: 700px; padding: 30px; background: #adb">
       <img src="http://p6.sinaimg.cn/1642346981/180/92211342365188" alt="" style="display: block">
     </div>
+  
+    <p>Floating, non-replaced element</p>
+  
+    <div class="float-parent" style="width: 700px; padding: 30px; height: 150px; background: #aaddbb">
+      <div style="width: 50%; background: #ccdd45; height: 100px;"></div>
+    </div>
+
+    <p class="tt t1 t2">ddd</p>
   </body>
 </html>

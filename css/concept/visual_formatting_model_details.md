@@ -327,3 +327,26 @@ width 对于这样的元素不生效，而对于水平方向的 margin-left: aut
 ![](./resource/block-levet-replaced.png)
 
 > 元素的 width 为图片固有的宽度；margin-right, margin-left 的 used value 为 containing block.width - width:180 - padding-left:0 - padding-right:0 - border-left-width:0 - border-right-width
+
+##### 10.3.5 Floating, non-replaced elements
+
+在这种情况下：
+
+如果 margin-left, margin-right 的 computed value 是 auto, 那么 used value 为 0；
+
+如果 width 是 computed value 是 auto, 那么 used value 为 ‘shrink-to-fit’ width (也就是 收缩后适合内容的宽度)；
+
+shrink-to-fit width 的计算方法与使用 table 布局是计算单元格的 width 类似。 大体上就是：calculate the preferred width by formatting content without breaking lines other than where explicit line breaks occur, and also calculate the preferred minimum width e.g., by trying all possible lien breaks. (没太理解这句话，特别是 explicit line breaks，其实就是想不到合适的场景，大概写下我的理解：通过不折行的渲染内容，然后计算一个合适的 width). CSS2.2 中没有定义明确的算法。 最后，计算元素 available width (可用的 width: 也就是 shrink-to-fit 的上限 width)， 算法是: containing block.width 减去 margin-left, border-left-width, padding-left, padding-right, border-right-width, margin-right 的 used value 和 滚动条的宽度。
+
+所以 shrink-to-fit width = min(max(preferred minimum width, available width), preferred width).
+
+> 当然如果我们通过 css 规则指定了 width, margin-left, margin-right, 那么就直接使用我们指定的值。
+
+##### 10.3.6 Floating, replaced elements
+
+如果 margin-left, margin-right 的 computed value 是 auto, 那么 used value 将会是 0；
+
+width 的 used value 的算法和 inline, replaced 场景一致。
+
+##### 10.3.7 Absolutely positioned, non-replaced elements
+
