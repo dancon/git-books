@@ -76,19 +76,80 @@
 
 ![](../resource/body-height.gif)
 
+综合如下图：
+
+![](../resource/font-metrics.png)
+
 # line-height
+
+### 理论知识
 
 在理解了上述的概念后，我们正式开始介绍 line-height.
 
-在 CSS 中并不会有如上那么细致的介绍
+CSS 假设所有的字体都有自己的度量方法，并且定义了 baseline 以上的高度和以下的深度，这里用 A 代表高度，D 代表深度，AD = A + D 代表从字体顶部到底部的距离。
 
-<p style="
-    padding: 0;
-    margin: 0;
-    font-size: 60px;
-    background: #598;
-    line-height: 1;
-">XpxhÉĘ</p>
+> CSS 规范推荐使用 `OpenType` 或者 `TrueType` 中 `OS/2` 表格中的 `sTypoAscender` 和 `sTypoDescender` 定义来实现上述的 A 和 D（abs(sTypoAscender) + abs(sTypoDescender) 为元素的 font-size 值），如果系统中的字体缺失如上的定义，那就使用 `HHEA` 表格中的 `Ascent` 和 `Descent` 的定义来实现上述的 A 和 D.
+
+用户代理必须把同一个 non-replaced inline box 中的所有字符按照各自的 baseline 对齐。由于同一个元素中的所有字符可以拥有不同的字体，所以各自的 A 和 D 没有必要都相等。如果一个 inline box 没有任何字符，那么这个元素也会包含一个宽度为 0 的不可见的字符，而且该字符拥有元素可用字体的 A 和 D.
+
+除此之外，每个字符还需要添加行距 L（Leading）. 行距的计算方法如下：
+
+L = line-height - AD.
+
+L/2 添加到 A 的顶部，剩下的 L/2 添加到 D 底部。
+
+> Note: 行距 L 可以为负值。
+
+`line-height` 的值就是包含了所有字符和字符两边的半行距(L/2)的 inline box 的 height.
+
+基于如上描述，做如下图进行更具体的解释：
+
+![](../resource/line-height.png)
+
+### 属性介绍
+|       |            |
+| :---- | :--------- |
+| 可用值 | normal <number> <length> percentage inherit |
+| 初始值 | normal |
+| 适用于 | 所有元素 |
+| 是否可继承 | 是 |
+| 百分值 | 基于元素自身的 `font-size` 来计算 |
+
+
+#### `normal`
+
+基于元素的字体，设置一个合理的值，建议设置 line-height 值为 （1.0 ~ 1.2] 直接设置为 `normal`
+
+#### <length>
+
+使用给定的值作为 line box 的高度，负值无效。
+
+#### <number>
+
+使用元素自身 font-size 的 number 倍作为行高，负值无效。
+
+#### <percentage>
+
+基于元素自身的 font-size 来计算，负值无效。
+
+# 应用
+
+在实际开发过程中，我们经常会使用如下方案来实现单行元素的“垂直居中”。
+
+```
+{
+  height: 60px;
+  line-height: 60px;
+}
+```
+
+接下来，我们就解释下其中的原理。
+
+当 `line-height: 1` 时， 元素的 line-height == font-size, 这时的 L = 0, 也就是说没有行距。
+
+上述方案中，假设元素的 `font-size: 20px`, L = 60 - 20 = 40， L/2 加在 font ascent line 的顶部， L/2 加在 font descent line 的底部，那么单行内容在元素内部就是垂直居中的了。
+
+> Note: 由于有些字体，是让字符坐落在 baseline 上的，所以就算使用了如上方案，在视觉上也不是垂直居中的，这就依赖于用户系统的默认字体或者是用户自定义的字体是什么了，对于中文 浏览器对 微软雅黑 UI 这款字体垂直居中的渲染效果是比较好的。当然我们也可以针对不同的字体手动调整，但是不推荐这么做，因为由于字体差异造成的视觉问题也是 1~2px 级别的，基本可以忽略不计。
 
 # 参考文章
 
@@ -97,3 +158,7 @@
 * <https://www.w3.org/TR/CSS22/visudet.html#line-height>
 
 * <http://stackoverflow.com/questions/27631736/meaning-of-top-ascent-baseline-descent-bottom-and-leading-in-androids-font>
+
+* <https://www.microsoft.com/typography/otspec/recom.htm#tad>
+
+* <https://www.microsoft.com/typography/OTSPEC/hhea.htm>
