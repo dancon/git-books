@@ -109,7 +109,7 @@ L/2 添加到 A 的顶部，剩下的 L/2 添加到 D 底部。
 ### 属性介绍
 |       |            |
 | :---- | :--------- |
-| 可用值 | normal <number> <length> percentage inherit |
+| 可用值 | normal number length percentage inherit |
 | 初始值 | normal |
 | 适用于 | 所有元素 |
 | 是否可继承 | 是 |
@@ -120,15 +120,15 @@ L/2 添加到 A 的顶部，剩下的 L/2 添加到 D 底部。
 
 基于元素的字体，设置一个合理的值，建议设置 line-height 值为 （1.0 ~ 1.2] 直接设置为 `normal`
 
-#### <length>
+#### `length`
 
 使用给定的值作为 line box 的高度，负值无效。
 
-#### <number>
+#### `number`
 
 使用元素自身 font-size 的 number 倍作为行高，负值无效。
 
-#### <percentage>
+#### `percentage`
 
 基于元素自身的 font-size 来计算，负值无效。
 
