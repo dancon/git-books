@@ -55,3 +55,5 @@
 2016/12/01 添加[Visual formatting model detail 翻译](/css/concept/visual_formatting_model_details.md)
 
 2017/01/06 添加[你不知道的 line-height](/css/essay/what_you_dont_know_about_line-height.md)
+
+2017/01/22 添加[SVG requiredFeatures 属性说明](/js/essay/svg_requiredFeatures.md)

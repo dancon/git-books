@@ -12,6 +12,7 @@
         * [移动端弹框后禁止背景屏幕滑动的解决方案](/js/essay/dialog_forbid_back_scroll.md)
         * [Javascript继承机制的设计思想](/js/essay/JavaScript_OO_design.md)
         * [Hybrid app device width 获取不正确](/js/essay/native_web_hybrid_issue_device_width.md)
+        * [SVG requiredFeatures 属性说明](/js/essay/svg_requiredFeatures.md)
 * [CSS](css/index.md)
     * 选择器
         * [伪类 :only-child](css/selector/only-child.md)
